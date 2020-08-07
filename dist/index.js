@@ -745,7 +745,7 @@ async function run() {
         const token = Object(_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('github-token', { required: true });
         const deployment_id = parseInt(Object(_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('deployment-id', { required: true }), 10);
         const description = Object(_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('description', { required: false });
-        const state = Object(_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('initial-state', {
+        const state = Object(_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('state', {
             required: true,
         });
         const environment_url = Object(_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)('environment-url', { required: false });
