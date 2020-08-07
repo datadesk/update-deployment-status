@@ -29,7 +29,7 @@ async function run() {
       10
     );
     const description = getInput('description', { required: false });
-    const state = getInput('initial-state', {
+    const state = getInput('state', {
       required: true,
     }) as DeploymentStatusStates;
     const environment_url = getInput('environment-url', { required: false });
