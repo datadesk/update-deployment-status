@@ -1,0 +1,28 @@
+name: Update Deployment Status
+description: A GitHub Action to facilitate an update of a GitHub Deployment Status
+author: Ryan Murphy
+inputs:
+  github-token:
+    description: The GitHub token used to create an authenticated client
+    default: ${{ github.token }}
+    required: false
+  deployment-id:
+    description: The ID of the deployment to create this status for
+    required: true
+  description:
+    description: Optional short description of the deployment status
+    default: ""
+    required: false
+  environment-url:
+    description: The URL for accessing your environment
+    default: ""
+    required: false
+  state:
+    description: The new state of the deployment
+    required: true
+outputs:
+  deployment-status-id:
+    description: The ID that references the created deployment status
+runs:
+  using: node12
+  main: dist/index.js
